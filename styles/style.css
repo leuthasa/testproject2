@@ -1,0 +1,428 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "inter-tight-variable", sans-serif;
+  font-variation-settings: "wght" 100;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Bilder Slider im Index */
+.index-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-slides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  user-select: none;
+  padding: 2%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px 30px 2px;
+  background-color: #c0b4b4;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #7e726e;
+}
+
+/*Style for the header*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em 1em 2em;
+  background-color: #ffe4db;
+}
+
+header h1 {
+  font-family: "bebas-neue-pro", sans-serif;
+  font-size: 2em;
+  color: #8d4b4c;
+}
+.headerlogo {
+  height: 10vh;
+}
+
+/*Style for the footer*/
+footer {
+  width: 100%;
+  position: static; /* Change position to static */
+  margin-top: auto; /* Push footer to the bottom */
+  bottom: 0;
+  background-color: #ffe4db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+footer .info {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.grid-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+footer p,
+footer a {
+  font-variation-settings: "wght" 400;
+  color: #8d4b4c;
+}
+
+.footericons {
+  width: 10%;
+  justify-self: flex-end;
+}
+
+footer .horizontalline {
+  width: 40%;
+  height: 2px;
+  background-color: #da9d9c;
+  margin: 5px 0px 5px 0px;
+}
+
+footer .version {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.version p {
+  justify-self: center;
+  font-size: x-small;
+}
+
+footer .verticalline {
+  height: 100%;
+  width: 2px;
+  background-color: #da9d9c;
+  justify-self: center;
+}
+
+/* Style the form content */
+.form-content {
+  overflow: hidden;
+  clear: both;
+}
+
+/* Style the fieldsets */
+fieldset {
+  background-color: #f3d0c4;
+}
+
+/* Style the input fields */
+button,
+datalist,
+fieldset,
+input,
+legend,
+optgroup,
+option,
+output,
+select,
+textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #777;
+  font-family: "inter-tight-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+}
+
+/* Style the labels */
+label {
+  font-size: 1em;
+}
+
+/* Style the error messages */
+.error-text {
+  color: #f00;
+  grid-column-start: 2;
+}
+
+/* Linie unterhalb des Titels */
+.linie {
+  border: 0;
+  border-top: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Script Switch */
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-label {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #da9d9c;
+  border-radius: 34px;
+  transition: background-color 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #8d4b4c;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Navigationsbar */
+.navbar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Zentrieren der Navigationsleiste */
+  position: relative; /* Relativ positionieren, um sie zwischen Header und Main zu platzieren */
+  margin-top: 20px; /* Abstand vom Header */
+  margin-bottom: 20px; /* Abstand zum Main-Element */
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #da9d9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+
+.current {
+  background-color: #8d4b4c; /* Farbe für die aktuelle Position */
+  color: white;
+  opacity: 100%;
+}
+
+/* Linie zwischen den Kreisen */
+.nav-item:not(:last-child) .circle::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Länge der Linie anpassen */
+  height: 3px; /* Dicke der Linie anpassen */
+  background-color: #8d4b4c; /* Farbe der Linie anpassen */
+  top: 50%; /* Vertikale Ausrichtung */
+  left: 100%; /* Beginn der Linie am rechten Rand des Kreises */
+  transform: translateY(-1px); /* Vertikale Ausrichtung anpassen */
+}
+
+/* Submit Button */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  background: #8d4b4c;
+  color: #f3d0c4;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+.submit-button:hover {
+  background-color: #f3d0c4;
+  color: #8d4b4c;
+  transition: 0.6s ease;
+}
+
+/* Navigations Bar Links */
+.link-navbar a {
+  text-decoration: none;
+  font-family: "bebas-neue-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Gestaltung von Time und Date Slots Formular, sowie Persönliche Daten  */
+.time-date,
+.personal-data {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Verfikitaionsformular */
+.verification {
+  list-style: none;
+}
+
+/* Textdesign Titel */
+h2 {
+  font-family: "bebas-neue-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 190%;
+  margin-bottom: 4%;
+}
+
+/* Textdesign Untertitel */
+h3 {
+  font-variation-settings: "wght" 400;
+  font-size: 110%;
+  margin-bottom: 3%;
+}
+
+/* Design Checkbox Step 1 */
+.checkbox-step1 label {
+  display: block;
+}
+
+.checkbox-step1 input[type="checkbox"],
+.radio-step1 input[type="radio"] {
+  margin-right: 5px;
+}
+
+.checkbox-step1 input[type="checkbox"]:checked,
+.radio-step1 input[type="radio"]:checked {
+  accent-color: #8d4b4c;
+}
+
+/* Textdesign Vision */
+.step1-textdesign p {
+  margin: 5px 0px;
+}
+
+/* Service Textdesign */
+.radio-step1 input[type="radio"] {
+  margin-bottom: 15px;
+}
+
+/* Design für Sections */
+section {
+  margin-bottom: 25px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+.step1 {
+  margin: 5px 0px;
+}
+
+/* Fieldset Design */
+fieldset {
+  border: none;
+}
+
+/* Design Email Step 3 */
+.step3 input[type="email"] {
+  width: 250px;
+}
+
+/* Icons Datum und Zeit Step2 */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.custom-date-input {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-date-input input[type="date"] {
+  padding-right: 40px; /* Platz für das Icon */
+  position: relative;
+}
+
+.custom-date-input::before {
+  content: "";
+  background: url("media/04_Step2/Icon_Kalender.png") no-repeat center center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Damit das Icon nicht klickbar ist */
+}
